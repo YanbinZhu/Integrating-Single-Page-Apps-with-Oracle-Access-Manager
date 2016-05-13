@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="SinglePageApplicationOAM">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SinglePageApplicationOAM</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/Home">Home</a>
+            </div>
+
+            <div class="navbar-collapse collapse" ng-class="!navCollapsed && 'in'">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/Contact">Contact</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="loginLink">Welcome: abc</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="container body-content">
+        <div ng-view> </div>
+        <footer>
+            <p>2016 - YanbinZhu</p>
+        </footer>
+    </div>
+
+    <!-- CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.min.js"></script>
+    <!-- CDN -->
+
+    <!-- build:js -->
+    <script src="appConfig.js"></script>
+    <script src="app/Home/Home.js"></script>
+    <script src="app/Contact/Contact.js"></script>
+    <script src="app/Error/Error.js"></script>
+    <script src="app/Error/ErrorService.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>
